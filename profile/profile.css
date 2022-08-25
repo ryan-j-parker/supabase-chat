@@ -1,0 +1,54 @@
+* {
+    font-family: 'Abel', sans-serif;
+}
+
+.page-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+a {
+    color: #FFA223;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.logo {
+    float: left;
+    height: 50px;
+}
+
+#update-btn {
+    background-color: grey;
+    width: 150px;
+    margin: 0 auto;
+}
+
+button {
+    height: 100px;
+    background-color: blue;
+    width: 150px;
+    color: white;
+}
+
+.avatar {
+    height: 200px;
+}
+
+#preview {
+    height: 150px;
+}

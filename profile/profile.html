@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/x-icon" href="assets/alchemy-favicon.png" />
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="../styles/form.css" />
+    <link rel="stylesheet" href="profile.css" />
+    <title>chatterbox</title>
+</head>
+
+<body>
+    <header class="page-header">
+        <img class="logo" src="/assets/chatterbox-placeholder2.jpg">
+        <p class="title">chatterbox</p>
+        <nav>
+            <a id="chat-room-link" href="chat-room">Chat Room</a>
+            <a id="sign-out-link" href="auth">Sign Out</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="profile-body">
+            <form id="profile-form">
+                <label for="username">
+                    <h2>Username:</h2>
+                    <input name="user_name" type="text" placeholder="enter a username...">
+                </label>
+                <label for="avatar">
+                    <h2>Avatar:</h2>
+                    <input type="file" name="avatar" id="avatar-input" placeholder="upload an avatar"
+                        accept="image/*" required>
+                </label>
+                <p>
+                    <img class="avatar" id="preview" alt="avatar preview" >
+                </p>
+
+                <button id="update-btn" name="update">update profile</button>
+            </form>
+        </div>
+
+        <div class="profile-display">
+
+        </div>
+
+    </main>
+
+    <footer>&copy;2022 Alchemy Software Developer</footer>
+
+    <script type="module" src="profile.js"></script>
+</body>
+
+</html>

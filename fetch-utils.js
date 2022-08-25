@@ -1,7 +1,7 @@
-const SUPABASE_URL = '';
-const SUPABASE_KEY = '';
+export const SUPABASE_URL = 'https://ycrjdcltdpujspwklmtr.supabase.co';
+export const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InljcmpkY2x0ZHB1anNwd2tsbXRyIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NTk2NDA4ODAsImV4cCI6MTk3NTIxNjg4MH0.09-eHnBOrLeSZ5iozNMkme5G9W9_LfVD2GYU4ycn4eg';
 
-const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+export const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 /* Auth related functions */
 
@@ -43,3 +43,11 @@ export async function signOutUser() {
 }
 
 /* Data functions */
+
+export async function getUserProfile(id) {
+    return await client.from('profiles').select('*').match({ id }).single();
+}
+
+export async function updateProfile(profile) {
+    return await client.from('profiles').upsert(profile);
+}
