@@ -6,7 +6,7 @@
     --label-color: rgb(75, 102, 98);
     --placeholder-color: rgb(136, 136, 153);
     --offset-color: rgb(217, 236, 217);
-    --action-color: rgb(77, 132, 252);
+    --action-color: rgb(63, 216, 216);
 
     --main-font: 'Abel', sans-serif;
 }
@@ -101,6 +101,7 @@ footer {
 #comments img {
     height: 32px;
     margin-right: 8px;
+    border-radius: 100%;
 }
 
 #comments ul {
