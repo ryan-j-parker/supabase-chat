@@ -44,3 +44,18 @@ export async function signOutUser() {
 }
 
 /* Data functions */
+
+/* Post Comments */
+export async function addComment(comment) {
+    const response = await client.from('comments').insert(comment).single();
+    return checkError(response);
+}
+
+export async function getAllComments() {
+    const response = await client.from('comments').select('*');
+    return checkError(response);
+}
+
+function checkError({ data, error }) {
+    return error ? console.error(error) : data;
+}
