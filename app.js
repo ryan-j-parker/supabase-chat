@@ -1,6 +1,6 @@
 // importing other stuff, utility functions for:
 // working with supabase:
-import { checkAuth, signOutUser, addComment, getAllComments } from './fetch-utils.js';
+import { checkAuth, signOutUser, addComment, getAllComments, updateCommentsInRealtime } from './fetch-utils.js';
 import { renderComments } from './render-utils.js';
 // pure rendering (data --> DOM):
 
@@ -31,6 +31,7 @@ async function displayComments() {
     }
 }
 
+updateCommentsInRealtime(displayComments);
 displayComments();
 
 // events:

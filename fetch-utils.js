@@ -56,6 +56,13 @@ export async function getAllComments() {
     return checkError(response);
 }
 
+export function updateCommentsInRealtime(handleInsert) {
+    client
+        .from('comments')
+        .on('INSERT', handleInsert)
+        .subscribe();
+}
+
 function checkError({ data, error }) {
     return error ? console.error(error) : data;
 }
