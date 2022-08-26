@@ -21,10 +21,9 @@
 
 <body>
     <header class="page-header">
-        <img class="logo" src="../assets/chatterbox-favicon.png">
-        <p class="title">chatterbox</p>
+        <p class="title">CHATTERBOX</p>
         <nav>
-            <a id="chat-room-link" href="chat-room">Chat Room</a>
+            <a id="chat-room-link" href="/">Chat Room</a>
             <a id="sign-out-link" href="../auth">Sign Out</a>
         </nav>
     </header>
@@ -33,18 +32,18 @@
         <div class="form-container">
             <form id="profile-form">
                 <label for="user_name" class="form-label">
-                    <h2>Username:</h2>
+                    Username:
                     <input type="text" name="user_name" id="user_name" placeholder="enter username" required>
                 </label>
                 <label for="avatar" class="form-label">
-                    <h2>Avatar:</h2>
+                    Avatar:
                     <input type="file" name="avatar" id="avatar-input" placeholder="upload an avatar" accept="image/*">
                 </label>
                 <p>
                     <img class="hidden" id="preview" alt="avatar preview">
                 </p>
 
-                <button id="update-btn" name="update">update profile</button>
+                <button id="update-btn" name="update">Update Profile</button>
                 <p class="error"></p>
             </form>
         </div>
