@@ -1,0 +1,78 @@
+:root {
+    --purple: #6D21A1;
+    --orange: #FD9C1D;
+    --red: #FC4549;
+    --blue: #3ED8D7;
+}
+
+* {
+    font-family: 'Abel', sans-serif;
+}
+
+.page-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+
+#profile-form {
+    background: linear-gradient(var(--purple) 20%, var(--orange));
+    color: var(--blue);
+}
+
+
+a {
+    color: var(--orange);
+    text-decoration: none;
+    margin: 0 50px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.logo {
+    float: left;
+    height: 50px;
+}
+
+#update-btn {
+    background-color: var(--red);
+    width: 150px;
+    margin: 0 auto;
+}
+
+button {
+    height: 100px;
+    width: 150px;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(.97);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.preview-viz {
+    height: 150px;
+    width: auto;
+    object-fit: cover;
+    border: 1px solid var(--red);
+}

@@ -14,3 +14,4 @@ export function renderComments(comment) {
     
     return ul;
 }
+
