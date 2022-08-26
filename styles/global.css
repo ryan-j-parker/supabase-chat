@@ -74,7 +74,7 @@ footer {
 }
 
 #comment-form textarea {
-    font-size: 1.3em;
+    font-size: .9em;
     height: 100px;
     width: 400px;
     resize: none;
@@ -96,10 +96,11 @@ footer {
 #comments {
     overflow-y: scroll;
     margin: 24px;
+    font-size: 0.7em;
 }
 
 #comments img {
-    height: 32px;
+    height: 24px;
     margin-right: 8px;
     border-radius: 100%;
 }
