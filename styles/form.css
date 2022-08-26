@@ -3,7 +3,7 @@ form {
     margin: auto;
     max-width: 500px;
     border: 1px solid;
-    background: var(--offset-color);
+    background: rgba(253,156,29,1);
     padding: 20px;
 
     display: grid;
@@ -16,7 +16,7 @@ label {
 }
 
 label div {
-    font-family: 'Titillium Web';
+    font-family: 'Abel', sans-serif;
     font-size: 0.9em;
     font-weight: bold;
     color: var(--label-color);
@@ -48,7 +48,7 @@ form *::placeholder {
 form textarea {
     height: 70px;
     padding: 5px;
-    font-family: 'Rubik';
+    font-family: 'Abel', sans-serif;
     resize: vertical;
 }
 
@@ -58,7 +58,7 @@ form button {
     background: var(--action-color);
     border: 0;
     font-weight: bold;
-    color: white;
+    font-family: 'Abel', sans-serif;
 }
 
 form button:disabled {
