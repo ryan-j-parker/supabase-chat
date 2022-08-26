@@ -45,6 +45,7 @@ commentForm.addEventListener('submit', async (e) => {
     });
 
     if (response.error) {
+        // eslint-disable-next-line no-console
         console.log(response.error);
     } else {
         commentForm.reset();
