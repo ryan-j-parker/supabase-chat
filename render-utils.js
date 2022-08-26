@@ -4,7 +4,7 @@ export function renderComments(comment) {
     const avatar = document.createElement('img');
     const userName = document.createElement('span');
     
-    userName.textContent = 'placeholder: ';
+    userName.textContent = `${comment.user_id}: `;
     avatar.src = './assets/avatar-placeholder-circle.png';
 
     li.textContent = comment.text;
