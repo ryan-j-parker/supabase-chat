@@ -9,24 +9,33 @@
     font-family: 'Abel', sans-serif;
 }
 
+label {
+    color: black;
+}
+
 .page-header {
+    position: sticky;
+    top: 0;
+    padding: 0 64px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: auto;
+    align-items: center;
+}
+
+.page-header .title {
+    font-size: 1.8em;
+    font-weight: 800;
+}
+
+.page-header nav {
+    flex-grow: 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 48px;
 }
 
 #profile-form {
-    background: linear-gradient(var(--purple) 20%, var(--orange));
+    background: var(--orange);
     color: var(--blue);
-}
-
-
-a {
-    color: var(--orange);
-    text-decoration: none;
-    margin: 0 50px;
 }
 
 a:hover {
@@ -47,15 +56,14 @@ a:visited {
 }
 
 #update-btn {
-    background-color: var(--red);
-    width: 150px;
+    background-color: var(--blue);
+    width: 100%;
     margin: 0 auto;
 }
 
 button {
     height: 100px;
     width: 150px;
-    color: white;
 }
 
 button:hover {
@@ -63,7 +71,7 @@ button:hover {
 }
 
 button:active {
-    transform: scale(.97);
+    transform: scale(.95);
 }
 
 .hidden {
