@@ -43,7 +43,6 @@ profileForm.addEventListener('submit', async (e) => {
     await updateProfile(profile);
 
     preview.src = '';
-    console.log(profile.username);
     profileForm.reset();
     preview.classList.add('hidden');
     displayProfile();
@@ -54,7 +53,6 @@ avatarInput.addEventListener('change', () => {
     preview.src = URL.createObjectURL(file);
     preview.classList.remove('hidden');
     preview.classList.add('preview-viz');
-
 });
 
 async function displayProfile() {
@@ -67,7 +65,5 @@ async function displayProfile() {
             preview.src = profile.avatar_url;
         }
     }
-    
 }
-
 displayProfile();
