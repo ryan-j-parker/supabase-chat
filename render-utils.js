@@ -1,17 +1,17 @@
-export function renderProfiles(profiles) {
+export function renderComments(comment) {
+    const ul = document.createElement('ul');
+    const li = document.createElement('li');
+    const avatar = document.createElement('img');
+    const userName = document.createElement('span');
+    
+    userName.textContent = `${comment.user_id}: `;
+    avatar.src = './assets/avatar-placeholder-circle.png';
 
-    const fragment = document.createDocumentFragment();
+    li.textContent = comment.text;
+    li.prepend(avatar, userName);
 
-    for (let profile of profiles) {
-        const profileDiv = document.createElement('div');
-        const userNameEl = document.createElement('h2');
-        const userAvatarEl = document.createElement('img');
-
-        userNameEl.textContent = profile.username;
-        userAvatarEl.textContent = profile.avatar_url;
-
-        profileDiv.append(userNameEl, userAvatarEl);
-        fragment.append(profileDiv);
-    }
-    return fragment;
+    ul.append(li);
+    
+    return ul;
 }
+

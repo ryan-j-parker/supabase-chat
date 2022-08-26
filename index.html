@@ -9,27 +9,35 @@
     <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/global.css" />
-    <title>Supabase Web App</title>
+    <title>CHATTERBOX</title>
 </head>
 
 <body>
     <header class="page-header">
-        <img class="logo" src="/assets/html_css_js.png">
-        <p class="title">Supabase Web App</p>
+        <p class="title">CHATTERBOX</p>
         <nav>
+            <a id="profile-link" href="profile">Profile</a>
             <a id="sign-out-link" href="auth">Sign Out</a>
         </nav>
     </header>
 
     <main>
+        <section id="chat-section">
+            <div id="comments">
+               
+            </div>
+            <form id="comment-form">
+                <textarea name="text" placeholder="Enter comment here..."></textarea>
+                <button>Say Something</button>
+            </form>
+        </section>
 
     </main>
 
-    <footer>&copy;2022 Alchemy Software Developer</footer>
+    <footer>&copy;2022 The Ryans</footer>
 
     <script type="module" src="app.js"></script>
 </body>
