@@ -1,3 +1,10 @@
+:root {
+    --purple: #6D21A1;
+    --orange: #FD9C1D;
+    --red: #FC4549;
+    --blue: #3ED8D7;
+}
+
 * {
     font-family: 'Abel', sans-serif;
 }
@@ -10,9 +17,16 @@
     margin: auto;
 }
 
+#profile-form {
+    background: linear-gradient(var(--purple) 20%, var(--orange));
+    color: var(--blue);
+}
+
+
 a {
-    color: #FFA223;
+    color: var(--orange);
     text-decoration: none;
+    margin: 0 50px;
 }
 
 a:hover {
@@ -33,22 +47,33 @@ a:visited {
 }
 
 #update-btn {
-    background-color: grey;
+    background-color: var(--red);
     width: 150px;
     margin: 0 auto;
 }
 
 button {
     height: 100px;
-    background-color: blue;
+    background-color: ;
     width: 150px;
     color: white;
 }
 
-.avatar {
-    height: 200px;
+button:hover {
+    cursor: pointer;
 }
 
-#preview {
+button:active {
+    transform: scale(.97);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.preview-viz {
     height: 150px;
+    width: auto;
+    object-fit: cover;
+    border: 1px solid var(--red);
 }

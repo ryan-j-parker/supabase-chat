@@ -44,10 +44,31 @@ export async function signOutUser() {
 
 /* Data functions */
 
-export async function getUserProfile(id) {
-    return await client.from('profiles').select('*').match({ id }).single();
+export async function getProfile(id) {
+    return await client.from('profiles').select().match({ id });
 }
 
 export async function updateProfile(profile) {
-    return await client.from('profiles').upsert(profile);
+    return await client.from('profiles').upsert(profile).single();
+}
+
+export async function uploadImage(bucketName, imageName, imageFile) {
+
+    const bucket = client.storage.from(bucketName);
+
+    const response = await bucket.upload(imageName, imageFile, {
+
+        cacheControl: '3600',
+
+        upsert: true,
+    });
+
+    if (response.error) {
+
+        return null;
+    }
+
+    const url = `${SUPABASE_URL}/storage/v1/object/public/${response.data.Key}`;
+
+    return url;
 }
