@@ -66,6 +66,7 @@ export async function uploadImage(bucketName, imageName, imageFile) {
     }
     const url = `${SUPABASE_URL}/storage/v1/object/public/${response.data.Key}`;
     return url;
+}
 
 /* Post Comments */
 export async function addComment(comment) {
@@ -88,5 +89,4 @@ export function updateCommentsInRealtime(handleInsert) {
 function checkError({ data, error }) {
     // eslint-disable-next-line no-console
     return error ? console.error(error) : data;
-
 }
